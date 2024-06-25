@@ -9,7 +9,9 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: oauthRecords
     volumes:
-        - postgres_data:file://C:/Program%20Files/PostgreSQL/16/data/
+      - type: bind
+        source: C:/Program Files/PostgreSQL/16/data
+        target: /var/lib/postgresql/data
     ports:
       - "5432:5432"
 
