@@ -8,11 +8,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
       POSTGRES_DB: oauthRecords
-      POSTGRES_INITDB_ARGS: "--lc-messages='en_US.UTF-8' --lc-monetary='en_US.UTF-8' --lc-numeric='en_US.UTF-8' --lc-time='en_US.UTF-8'"
-    volumes:
-      - type: bind
-        source: C:/Program Files/PostgreSQL/16/data
-        target: /var/lib/postgresql/data
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432"
 
