@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: oauthRecords
     volumes:
-        - postgres_data:/var/lib/postgresql/data
+        - postgres_data:C:/Program Files/PostgreSQL/16/data
     ports:
       - "5432:5432"
 
